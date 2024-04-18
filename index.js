@@ -57,13 +57,15 @@ const students = [
 const studentAverage = [];
 
 students.forEach((student) => {
-  const total = students.reduce((acc, score) => acc + score);
+  const total = students.reduce((acc, score) => acc + score,0);
   let averageMarks = total / student.scores.length;
   if (averageMarks >= 85) {
-    studentAverage.push(averageMarks.student.name);
+    studentAverage.push(student.name);
   }
-  console.log(studentAverage);
+
+
 });
+console.log(studentAverage);
 
 //   Given an object representing a car, with properties for the make, model, year, and a method to display the car's information, write a function that takes the car object and adds a new method to the object called age. The age method should return the current age of the car based on the current year and the car's year property. const car = {
 //     make: 'Ford',
